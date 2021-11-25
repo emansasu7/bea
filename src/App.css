@@ -1,0 +1,189 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;400&display=swap");
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/******************** ROOT *********************/
+:root {
+  /* colors */
+  --primary: #5c27a9;
+  --primary-bg-dark: #292837;
+  --light: #fefefe;
+  --dark: #060520;
+  --gradient: linear-gradient(
+    1deg,
+    rgba(56, 39, 169, 1) 0%,
+    rgba(92, 39, 169, 1) 100%
+  );
+  /* fonts */
+  --big-heading: 70px;
+  --sm-heading: 50px;
+  --sub-heading: 24px;
+  --link-text: 14px;
+  --regular: 16px;
+  /* background: rgb(92,39,169); */
+  /* background: ; */
+}
+
+/******************** GLOBAL *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  color: var(--light);
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  /* line-height: 1.5; */
+}
+.__btn {
+  display: inline-block;
+  /* margin-top: 20px; */
+  padding: 8px 20px;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--link-text);
+  background: var(--gradient);
+  color: var(--light);
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+}
+.__btn:hover {
+  transform: scale(0.98);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.34);
+}
+
+/******************** NAVBAR *********************/
+.__nav {
+  background: transparent;
+}
+._flex-end {
+  justify-content: flex-end;
+}
+
+/******************** HERO *********************/
+.__hero {
+  background-color: var(--primary-bg-dark);
+  height: 100vh;
+  /* width: 100%;  */
+  /* display: none; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--light);
+  text-align: left;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  /* box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.34); */
+}
+.__hero .__hero-left {
+  position: relative;
+  max-width: 600px;
+  padding-left: 150px;
+}
+
+.__hero h1 {
+  font-size: var(--big-heading);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.__hero-left p {
+  font-size: var(--sub-heading);
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.__hero-left::before {
+  content: url(./assets/bg-elllipse.svg);
+  position: absolute;
+  /* top: 0; */
+  left: -50%;
+  top: -150%;
+  z-index: -1;
+  width: 60%;
+}
+.__hero-right {
+  width: 600px;
+  display: flex;
+  margin-top: 30px;
+  padding-right: 70px;
+  position: relative;
+}
+.__hero-right img {
+  max-width: 380px;
+}
+.__hero-right::after {
+  content: url("./assets/bg-dots.svg");
+  /* display: block; */
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  z-index: -1;
+}
+
+/******************** ABOUT *********************/
+
+.__about {
+  padding: 30px;
+  width: 80%;
+  margin: auto;
+  background-color: var(--light);
+}
+.__about h2 {
+  font-size: var(--sm-heading);
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+.__about p {
+  line-height: 1.4;
+  color: var(--dark);
+}
